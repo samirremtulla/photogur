@@ -2,8 +2,18 @@
 
 class PicturesController < ApplicationController
 
-	def index
-		@greeting = "Ma Dawgs"
+	before_filter :load_pictures
+
+	#def index
+	#end
+
+
+	def show
+		@picture = @pictures[params[:id].to_i]
+
+	end
+
+	def load_pictures
 		@pictures = [
 			{
 				:title => "Megan Fox",
