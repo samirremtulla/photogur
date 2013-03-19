@@ -1,26 +1,3 @@
-<style>
-
-img {
-	height: 200px;
-	width: 200px;
-	border: 2px solid black;
-}
-
-p{
-	font-size: 18px;
-	color:black;
-}
-
-body{
-	background-color: green;
-}
-
-img {
-	display: none;
-}
-
-</style>
-
 <script>
 $('document').ready(function(){
   $('img').fadeIn(3500);  
@@ -33,8 +10,8 @@ $('document').ready(function(){
 
 
 <%- @pictures.each do |picture| %>
-	<p> author </p>
-	<p><img src=<%= picture %>></p>
-	<p> url: <a href=<%= picture %>> Click ME! </a> </p>
+	<p><strong> <%= picture[:title] %></strong> </p>
+	<p><img src="<%= picture[:url] %>"></p>
+	<p><em>Artist: <%= picture[:artist] %></em></p>
 	<br>
 <% end %>

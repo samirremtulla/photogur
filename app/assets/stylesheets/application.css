@@ -11,3 +11,33 @@
  *= require_self
  *= require_tree .
  */
+
+img {
+	height: 200px;
+	width: 200px;
+	border: 2px solid black;
+}
+
+p{
+	font-size: 18px;
+	color:white;
+}
+
+body{
+	background: url(http://www.hdwallpapers.in/walls/abstract_color_background_picture_8016-wide.jpg);
+	color:white;
+}
+
+img {
+	display: none;
+}
+
+h1{
+	font-size: 35px;
+	color: yellow;
+}
+
+h2{
+	color: red;
+	font-size 25px;
+}
