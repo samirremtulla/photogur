@@ -1,31 +1,40 @@
 <style>
 
 img {
-	border: 1px solid red;
-	height: 100px;
-	width: 100px;
+	height: 200px;
+	width: 200px;
+	border: 2px solid black;
 }
 
 p{
-	font-size: 10px;
+	font-size: 18px;
+	color:black;
+}
+
+body{
+	background-color: green;
+}
+
+img {
+	display: none;
 }
 
 </style>
 
-<h1>HELLO</h1>
+<script>
+$('document').ready(function(){
+  $('img').fadeIn(3500);  
+});
+</script>
 
-<p><%= "hello from ruby" %></p>
-<p><%= 1 + 1 %></p>
-<%= @greeting.swapcase %>
+<h1>Pictures of</h1>
+
+<h2><%= @greeting.swapcase %></h2>
 
 
 <%- @pictures.each do |picture| %>
+	<p> author </p>
 	<p><img src=<%= picture %>></p>
+	<p> url: <a href=<%= picture %>> Click ME! </a> </p>
+	<br>
 <% end %>
-
-<!-- 
-<img src=<%=@pictures[0]%>>
-<br>
-<img src=<%=@pictures[1]%>>
-<br>
-<img src=<%=@pictures[2]%>> -->
