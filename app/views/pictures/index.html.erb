@@ -1,1 +1,31 @@
+<style>
+
+img {
+	border: 1px solid red;
+	height: 100px;
+	width: 100px;
+}
+
+p{
+	font-size: 10px;
+}
+
+</style>
+
 <h1>HELLO</h1>
+
+<p><%= "hello from ruby" %></p>
+<p><%= 1 + 1 %></p>
+<%= @greeting.swapcase %>
+
+
+<%- @pictures.each do |picture| %>
+	<p><img src=<%= picture %>></p>
+<% end %>
+
+<!-- 
+<img src=<%=@pictures[0]%>>
+<br>
+<img src=<%=@pictures[1]%>>
+<br>
+<img src=<%=@pictures[2]%>> -->
