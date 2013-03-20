@@ -35,6 +35,18 @@ class PicturesController < ApplicationController
 	
 	end
 
+	def edit
+		@picture = Picture.find(params[:id])
+	end
+
+	def update
+		@picture = Picture.find(params[:id])
+		@picture.update_attribute(:url, params[:url])
+		@picture.update_attribute(:title, params[:title])
+		@picture.update_attribute(:artist, params[:artist])
+	
+		redirect_to '/pictures' 
+	end
 
 	# def load_pictures
 
