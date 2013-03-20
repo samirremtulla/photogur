@@ -13,6 +13,10 @@ class PicturesController < ApplicationController
 
 	end
 
+	def new
+	end
+	
+
 	def load_pictures
 		@pictures = [
 			{
