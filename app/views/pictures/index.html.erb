@@ -6,8 +6,8 @@
 
 
 <%- @pictures.each do |picture| %>
-	<p><strong> <%= picture[:title] %></strong> </p>
-	<p><img src="<%= picture[:url] %>"></p>
-	<p><em>Artist: <%= picture[:artist] %></em></p>
+	<p><strong> <%= picture.title %></strong> </p>
+	<p><img src="<%= picture.url %>"></p>
+	<p><em>Artist: <%= picture.artist %></em></p>
 	<br>
 <% end %>
