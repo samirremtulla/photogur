@@ -2,15 +2,17 @@
 
 class PicturesController < ApplicationController
 
-	before_filter :load_pictures
+	# before_filter :load_pictures
 
 	def index
+
+		@pictures = Picture.all
 	end
 
 
 	def show
 		# id comes from the route
-		@picture = @pictures[params[:id].to_i]
+		@picture = Picture.find params[:id].to_i
 
 	end
 
@@ -26,7 +28,7 @@ class PicturesController < ApplicationController
 		success = @picture.save
 		
 		if success
-			redirect_to pictures_path 
+			redirect_to '/pictures' # pictures_path <= this is complicated, we'll get into it later
 		end
 
 		# render :text => "Saving a picture. URL: #{params[:url]} Artist: #{params[:artist]} Title: #{params[:title]}" 
@@ -34,9 +36,7 @@ class PicturesController < ApplicationController
 	end
 
 
-	def load_pictures
-
-		@pictures = Picture.all
+	# def load_pictures
 
 
 		# @pictures = [
@@ -53,7 +53,7 @@ class PicturesController < ApplicationController
 		# 		:artist => "Unknown",
 		# 		:url => 'http://i.imgur.com/Hebp5.jpg'}
 		# ]	
-	end
+	# end
 
 
 end
