@@ -15,7 +15,11 @@ class PicturesController < ApplicationController
 
 	def new
 	end
-	
+
+	def create
+		# render :text => "Saving a picture. URL: #{params[:url]} Artist: #{params[:artist]} Title: #{params[:title]}" 
+	end
+
 
 	def load_pictures
 		@pictures = [
