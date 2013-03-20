@@ -7,7 +7,7 @@ post "pictures"    => "pictures#create"
 
 get "pictures/:id" => "pictures#show"
 get "pictures/:id/edit" => "pictures#edit"
-post "pictures/:id/edit" => "pictures#update"
+post "pictures/:id" => "pictures#update"
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
