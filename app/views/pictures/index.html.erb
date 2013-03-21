@@ -1,10 +1,18 @@
-<h1>Pictures!</h1>
+<h1>Pictures</h1>
 
+<!-- <a href="/pictures/new">New Picture</a> -->
+<!-- <a href="<%= new_picture_path %>" class="NewPic">New Picture</a> -->
+<!-- <div class="NewPic"><%= link_to "New Pictures", new_picture_path %></div> -->
+
+<br>
 
 <%- @pictures.each do |picture| %>
   <div class = "box">
+  <a href="<%= picture_path(picture) %>">
 	<p><strong> <%= picture.title %></strong> </p>
 	<p><img src="<%= picture.url %>"></p>
 	<p><em>Artist: <%= picture.artist %></em></p>
-	</div>
+  <p><a href="<%= edit_picture_path(picture)%>"> Edit </a>
+	</a>
+  </div>
 <% end %>
