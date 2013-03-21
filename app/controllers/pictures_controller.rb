@@ -22,8 +22,10 @@ class PicturesController < ApplicationController
 
 	def create
 
-		if Picture.create!(params[:picture])
-			redirect_to '/pictures'
+		@picture = Picture.new(params[:picture])
+		
+		if @picture.save
+			redirect_to "/pictures"
 		end	
 
 
@@ -47,11 +49,9 @@ class PicturesController < ApplicationController
 
 	def update
 		@picture = Picture.find(params[:id])
-		@picture.update_attribute(:url, params[:url])
-		@picture.update_attribute(:title, params[:title])
-		@picture.update_attribute(:artist, params[:artist])
-	
-		redirect_to '/pictures' 
+		if @picture.update_attributes(params[:picture])	
+			redirect_to "/pictures/#{@picture.id}"
+		end	
 	end
 
 	# def load_pictures
