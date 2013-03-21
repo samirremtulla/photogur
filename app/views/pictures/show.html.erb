@@ -1,5 +1,22 @@
-<%= params %>
-<hr>
 
+<!--<%= params %>-->
+<!-- <hr> -->
+
+<style type="text/css">
+
+img{
+  height:40%;
+  width:50%;
+  vertical-align:middle;
+  border: 1px solid black;
+  margin-left: 25%;
+}
+
+
+
+</style>
+<br>
 <h1><%= @picture[:title] %></h1>
 <img src="<%=@picture[:url] %>">
+<p>
+<a href="<%= edit_picture_path(@picture)%>"> Edit </a>

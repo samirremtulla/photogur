@@ -26,7 +26,11 @@ class PicturesController < ApplicationController
 		
 		if @picture.save
 			redirect_to pictures_path
-		end	
+		else
+			#if there was an error on the form
+			flash.now[:error] = "Can't be blank"
+			render :new
+		end
 
 
 		# @picture = Picture.new

@@ -1,6 +1,10 @@
 <!-- new.html.erb -->
 <h1> Add a picture! </h1>
 
+<!-- <div class ="errors">
+  <%= flash[:error] %>
+</div> -->
+
 <!-- FIRST VERSION HTML: <form action="/pictures" method="POST"> --><!--  sending something to the url therefore using POST -->
 
 <%= form_for @picture do |f| %>
@@ -13,11 +17,13 @@
 <p>
 	<label>Title</label><br>
   <%= f.text_field "title" %>
+  <p><%= @picture.errors.messages[:title].join(" ") %></p>
 </p>
 
 <p>
 	<label>URL</label><br>
   <%= f.text_field "url" %>
+  <p><%= @picture.errors.messages[:url].join(" ") %></p>
 </p>
 
 <p>
