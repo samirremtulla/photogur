@@ -12,29 +12,43 @@
  *= require_tree .
  */
 
+.box{
+	display: inline-block;
+  width: 250px;
+  height: 320px;
+  margin: 1em;
+  border: 1px solid white;
+  background-color: black;
+  opacity: .65;
+}
+
+.box:hover{
+	opacity: .85;
+
+}
+
 img {
 	height: 200px;
 	width: 200px;
 	border: 2px solid black;
+	vertical-align:middle;
 }
 
 p{
 	font-size: 18px;
 	color:white;
+	text-align: center;
 }
 
 body{
-	background: url(http://www.hdwallpapers.in/walls/abstract_color_background_picture_8016-wide.jpg);
+	background: url("http://users.telenet.be/memphis/temp/desktops/IMG3ONSPOXBHS.jpg");
 	color:white;
 }
 
 
 h1{
 	font-size: 35px;
-	color: yellow;
-}
-
-h2{
-	color: red;
-	font-size 25px;
+	color: white;
+	text-align:middle;
+	padding-left: 20px;
 }

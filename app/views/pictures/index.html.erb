@@ -1,11 +1,10 @@
-
-
-<h1>Awesome Pics</h1>
+<h1>Pictures!</h1>
 
 
 <%- @pictures.each do |picture| %>
+  <div class = "box">
 	<p><strong> <%= picture.title %></strong> </p>
 	<p><img src="<%= picture.url %>"></p>
 	<p><em>Artist: <%= picture.artist %></em></p>
-	<br>
+	</div>
 <% end %>

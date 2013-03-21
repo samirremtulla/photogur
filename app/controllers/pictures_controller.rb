@@ -5,7 +5,6 @@ class PicturesController < ApplicationController
 	# before_filter :load_pictures
 
 	def index
-
 		@pictures = Picture.all
 	end
 
