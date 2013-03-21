@@ -14,5 +14,11 @@
 	<p><em>Artist: <%= picture.artist %></em></p>
   <p><a href="<%= edit_picture_path(picture)%>"> Edit </a>
 	</a>
+<!--
+  <%= link_to picture_path(picture) do %>
+    <img src="<%= picture.url%>">
+  <% end %>
+-->
+  
   </div>
 <% end %>
