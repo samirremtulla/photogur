@@ -55,7 +55,9 @@ class PicturesController < ApplicationController
 		@picture = Picture.find(params[:id])
 		if @picture.update_attributes(params[:picture])	
 			redirect_to @picture
-		end	
+		else
+			render :edit
+		end
 	end
 
 	def destroy
