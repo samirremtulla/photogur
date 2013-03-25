@@ -14,6 +14,9 @@
 	<p><em>Artist: <%= picture.artist %></em></p>
   <p><a href="<%= edit_picture_path(picture)%>"> Edit </a>
 	</a>
+  <br>
+  <a> <%= link_to "Delete", picture_path(picture), :method => :delete, :confirm => "Are you sure you want to delete this picture?" %> </a>
+
 <!--
   <%= link_to picture_path(picture) do %>
     <img src="<%= picture.url%>">
